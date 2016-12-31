@@ -4,24 +4,24 @@ var autoprefixer = require('gulp-autoprefixer');
 var babel        = require('gulp-babel');
 var concat       = require('gulp-concat');
 var sass         = require('gulp-sass');
-var browserSync  = require('browser-sync');
+// var browserSync  = require('browser-sync');
 // var rename       = require('gulp-rename');
 // var uglify       = require('gulp-uglify');
 
-gulp.task('browser-sync', function() {
-  browserSync( {
-    server: {
-       baseDir: 'src',
-       routes: {
-         '/data': 'data'
-       }
-    }
-  } );
-} );
+// gulp.task('browser-sync', function() {
+//   browserSync( {
+//     server: {
+//        baseDir: 'src',
+//        routes: {
+//          '/data': 'data'
+//        }
+//     }
+//   } );
+// } );
 
-gulp.task('bs-reload', function () {
-  browserSync.reload();
-} );
+// gulp.task('bs-reload', function () {
+//   browserSync.reload();
+// } );
 
 
 gulp.task('styles', function() {
@@ -34,7 +34,7 @@ gulp.task('styles', function() {
     .pipe( sass() )
     .pipe( autoprefixer('last 2 versions') )
     .pipe( gulp.dest('src/static') )
-    .pipe( browserSync.reload( { stream:true } ) )
+    // .pipe( browserSync.reload( { stream:true } ) )
 } );
 
 gulp.task('scripts', function() {
@@ -50,7 +50,7 @@ gulp.task('scripts', function() {
     // maybe we want this later, or delete it
     // .pipe( rename( {suffix: '.min'} ) )
     // .pipe( uglify() )
-    .pipe( browserSync.reload( { stream:true } ) )
+    // .pipe( browserSync.reload( { stream:true } ) )
 } );
 
 gulp.task('build', ['styles', 'scripts'] );
