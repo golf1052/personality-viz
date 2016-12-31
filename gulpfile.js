@@ -61,5 +61,5 @@ gulp.task('scripts', function() {
 } );
 
 gulp.task('build', ['styles', 'scripts'] );
-gulp.task('default', ['build', 'connect'], function() {
+gulp.task('default', ['build'], function() {
 } );
