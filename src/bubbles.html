@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Personality Vis</title>
+    <link rel="stylesheet" href="static/main.css"/>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav--arrow-back">
+          <a href="/" class="">Back</a>
+        </nav>
+        <div class="form-inline">
+            <div class="select-wrapper">
+                <select name="categories" id="categoriesSelect" class="form-control">
+                    <option value="">All Categories</option>
+                    <option value="Extraversion">Extraversion</option>
+                    <option value="Agreeableness">Agreeableness</option>
+                    <option value="Conscientiousness">Conscientiousness</option>
+                    <option value="Neuroticism">Neuroticism</option>
+                    <option value="Openness to Experience">Openness to Experience</option>
+                </select>
+            </div>
+            <div id="radioDiv">
+                <label>Filter by: </label>
+            </div>
+        </div>
+    </div>
+    <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+    <script src="static/helpers.js" charset="utf-8"></script>
+    <script src="static/constants.js" charset="utf-8"></script>
+    <script src="static/common-svg.js" charset="utf-8"></script>
+    <script src="static/bubbles/bubbles.js" charset="utf-8"></script>
+</body>
+</html>

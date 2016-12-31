@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Personality Vis</title>
+    <link rel="stylesheet" href="static/main.css"/>
+    <link rel="stylesheet" href="static/detail.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="nav--arrow-back">
+          <a href="/" class="">Back</a>
+        </nav>
+        <select name="user" id="userSelect">
+            <option value="">?</option>
+            <option value="participant_1">Participant 1</option>
+            <option value="participant_2">Participant 2</option>
+            <option value="participant_3">Participant 3</option>
+        </select>
+        <div id="radioDiv">
+            <label>Year: </label>
+        </div>
+        <div>
+            <span id="Extraversion" class="underline">Extraversion</span>
+            <span id="Agreeableness">Agreeableness</span>
+            <span id="Conscientiousness">Conscientiousness</span>
+            <span id="Neuroticism">Neuroticism</span>
+            <span id="Openness">Openness to Experience</span>
+        </div>
+        <div id="categoryDiv">
+            <div id="score" class="category-score"><p></p><p id="title"></p></div>
+            <div id="details" class="category-detail"><p></p></div>
+        </div>
+        <div id="facetsDiv"></div>
+    </div>
+    <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+    <script src="static/helpers.js" charset="utf-8"></script>
+    <script src="static/constants.js" charset="utf-8"></script>
+    <script src="static/common-svg.js" charset="utf-8"></script>
+    <script src="static/detail/detail.js" charset="utf-8"></script>
+</body>
+</html>

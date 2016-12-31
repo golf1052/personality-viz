@@ -1,0 +1,46 @@
+// --------------------------------------------
+
+// VARIABLES
+
+// --------------------------------------------
+
+// --------------------------------------------
+// Fonts
+// --------------------------------------------
+
+@import 'https://fonts.googleapis.com/css?family=Poppins:300,400|Titillium+Web:700,900';
+
+// Font Fallbacks
+$fallback--sans:  Helvetica, Arial, sans-serif;
+
+// Font Families
+$titillium:  'Titillium Web', $fallback--sans;
+$poppins: 'Poppins', $fallback--sans;
+
+
+
+// --------------------------------------------
+// Color
+// --------------------------------------------
+
+$site-bg     : #fff;
+$dark-gray   : rgb(50, 50, 50);
+
+$pink: rgba(223, 73, 134, 1);
+$green: rgba(167, 252, 219, 1);
+$red: rgba(245, 100, 100, 1);
+$blue: rgba(127, 171, 212, 1);
+
+$hover-color : $blue;
+
+
+// --------------------------------------------
+// Breakpoints
+// --------------------------------------------
+
+$phone:      401px;
+$phablet:    550px;
+$tablet-sm:  768px;
+$tablet:     850px;
+$desktop:    1024px;
+$desktop-xl: 1240px;

@@ -1,0 +1,31 @@
+{
+  "name": "personality-vis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server/app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/golf1052/personality-vis.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/golf1052/personality-vis/issues"
+  },
+  "homepage": "https://github.com/golf1052/personality-vis#readme",
+  "devDependencies": {
+    "browser-sync": "2.6.5",
+    "gulp": "3.9.1",
+    "gulp-autoprefixer": "2.1.0",
+    "gulp-babel": "5.1.0",
+    "gulp-concat": "2.5.2",
+    "gulp-plumber": "1.0.0",
+    "gulp-rename": "1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "1.2.0"
+  }
+}

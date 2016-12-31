@@ -1,0 +1,213 @@
+@charset "UTF-8";
+/*
+  Name: Personality Vis
+  Description: Visualization of personality tests
+*/
+@import 'https://fonts.googleapis.com/css?family=Poppins:300,400|Titillium+Web:700,900';
+.graph__header {
+  margin: 0 50px; }
+
+.select-container {
+  margin-bottom: 10px; }
+  .select-container select {
+    display: none; }
+
+.select-options-container {
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  background: white;
+  z-index: 2;
+  -webkit-transition: height 0.2s linear;
+          transition: height 0.2s linear; }
+  .select-options-container .select__option {
+    border-bottom: none;
+    float: left;
+    clear: left; }
+    .select-options-container .select__option:first-of-type {
+      border-top: none; }
+    .select-options-container .select__option:last-of-type {
+      border-bottom: 1px solid black; }
+    .select-options-container .select__option:hover {
+      background: #7fabd4;
+      color: white;
+      padding-left: 30px; }
+  .select-options-container--open {
+    height: 295px; }
+
+.select__option {
+  font-family: "Titillium Web", Helvetica, Arial, sans-serif;
+  font-size: 25px;
+  padding: 10px 0 10px 20px;
+  width: 350px;
+  display: inline-block;
+  border: 1px solid #323232;
+  color: #323232;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease;
+          transition: 0.2s ease; }
+
+.select__option--default {
+  position: relative; }
+  .select__option--default:after {
+    content: '▾';
+    position: absolute;
+    font-size: 30px;
+    right: 20px;
+    top: 5px; }
+
+.facet-select {
+  min-height: 20px; }
+  .facet-select span {
+    margin-right: 20px; }
+    .facet-select span:hover {
+      color: #7fabd4; }
+      .facet-select span:hover:after {
+        background-color: #7fabd4; }
+
+.tick line {
+  stroke-width: 1px; }
+
+.tick text {
+  font-size: 12px; }
+
+.axis {
+  stroke-width: 1.5px; }
+
+rect {
+  stroke: 0; }
+
+svg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+#categoryDiv {
+  margin: 30px; }
+
+.category-score {
+  display: inline-block;
+  width: 17%;
+  vertical-align: middle;
+  margin-right: 5%; }
+  .category-score p {
+    margin: 0;
+    text-align: center; }
+    .category-score p:first-of-type {
+      font-size: 40px; }
+
+.category-detail {
+  display: inline-block;
+  width: 77%;
+  vertical-align: middle;
+  font-size: 12px; }
+
+.index-group {
+  fill: #ffffff; }
+
+#radioDiv label:first-of-type {
+  padding-left: 0; }
+
+#radioDiv + div {
+  font-size: 12px; }
+  #radioDiv + div span {
+    margin-right: 10px;
+    cursor: pointer; }
+
+#facetsDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.facet-div {
+  display: inline-block;
+  width: 46%;
+  margin-bottom: 30px;
+  margin-right: 3%; }
+  .facet-div .underline {
+    color: #323232; }
+    .facet-div .underline:after {
+      background-color: #323232; }
+
+:focus {
+  outline: none; }
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #323232; }
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+#navigation rect,
+#facetsDiv {
+  cursor: pointer; }
+
+.nav--arrow-back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  position: absolute;
+  left: 5%;
+  top: 5%; }
+  .nav--arrow-back:before {
+    content: "⇦";
+    font-size: 30px;
+    -webkit-transition: 0.2s -webkit-transform linear;
+            transition: 0.2s transform linear; }
+  .nav--arrow-back a {
+    text-decoration: none;
+    font-size: 10px;
+    margin-top: -50px;
+    margin-left: 5px;
+    padding-top: 40px;
+    z-index: 2; }
+  .nav--arrow-back:hover:before {
+    -webkit-transform: translateX(-3px);
+            transform: translateX(-3px); }
+
+.underline {
+  position: relative;
+  display: inline-block;
+  color: #7fabd4; }
+  .underline:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: -2px;
+    background: #7fabd4; }
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  overflow: hidden; }
+
+.container {
+  width: 75%;
+  margin: 0 auto;
+  height: 75%; }
+
+label {
+  padding: 0px 10px; }

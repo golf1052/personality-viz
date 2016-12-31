@@ -1,0 +1,265 @@
+{
+    "name": "participant_1",
+    "reports": [
+        {
+            "date": "2013-11",
+            "results": [
+                {
+                    "category": "Extraversion",
+                    "score": 30,
+                    "facets": {
+                        "Friendliness": 42,
+                        "Gregariousness": 39,
+                        "Assertiveness": 49,
+                        "Activity Level": 22,
+                        "Excitement-Seeking": 14,
+                        "Cheerfulness": 46
+                    }
+                },
+                {
+                    "category": "Agreeableness",
+                    "score": 73,
+                    "facets": {
+                        "Trust": 75,
+                        "Morality": 71,
+                        "Altruism": 68,
+                        "Cooperation": 84,
+                        "Modesty": 49,
+                        "Sympathy": 39
+                    }
+                },
+                {
+                    "category": "Conscientiousness",
+                    "score": 60,
+                    "facets": {
+                        "Self-Efficacy": 32,
+                        "Orderliness": 68,
+                        "Dutifulness": 81,
+                        "Achievement-Striving": 25,
+                        "Self-Discipline": 46,
+                        "Cautiousness": 82
+                    }
+                },
+                {
+                    "category": "Neuroticism",
+                    "score": 34,
+                    "facets": {
+                        "Anxiety": 17,
+                        "Anger": 8,
+                        "Depression": 45,
+                        "Self-Consciousness": 81,
+                        "Immoderation": 53,
+                        "Vulnerability": 43
+                    }
+                },
+                {
+                    "category": "Openness to Experience",
+                    "score": 52,
+                    "facets": {
+                        "Imagination": 30,
+                        "Artistic Interests": 36,
+                        "Emotionality": 75,
+                        "Adventurousness": 29,
+                        "Intellect": 45,
+                        "Liberalism": 90
+                    }
+                }
+            ]
+        },
+        {
+            "date": "2014-09",
+            "results": [
+                {
+                    "category": "Extraversion",
+                    "score": 22,
+                    "facets": {
+                        "Friendliness": 25,
+                        "Gregariousness": 39,
+                        "Assertiveness": 49,
+                        "Activity Level": 43,
+                        "Excitement-Seeking": 7,
+                        "Cheerfulness": 19
+                    }
+                },
+                {
+                    "category": "Agreeableness",
+                    "score": 79,
+                    "facets": {
+                        "Trust": 83,
+                        "Morality": 71,
+                        "Altruism": 45,
+                        "Cooperation": 90,
+                        "Modesty": 58,
+                        "Sympathy": 60
+                    }
+                },
+                {
+                    "category": "Conscientiousness",
+                    "score": 69,
+                    "facets": {
+                        "Self-Efficacy": 19,
+                        "Orderliness": 76,
+                        "Dutifulness": 90,
+                        "Achievement-Striving": 44,
+                        "Self-Discipline": 57,
+                        "Cautiousness": 82
+                    }
+                },
+                {
+                    "category": "Neuroticism",
+                    "score": 17,
+                    "facets": {
+                        "Anxiety": 5,
+                        "Anger": 4,
+                        "Depression": 69,
+                        "Self-Consciousness": 55,
+                        "Immoderation": 13,
+                        "Vulnerability": 23
+                    }
+                },
+                {
+                    "category": "Openness to Experience",
+                    "score": 35,
+                    "facets": {
+                        "Imagination": 0,
+                        "Artistic Interests": 36,
+                        "Emotionality": 44,
+                        "Adventurousness": 51,
+                        "Intellect": 35,
+                        "Liberalism": 90
+                    }
+                }
+            ]
+        },
+        {
+            "date": "2015-07",
+            "results": [
+                {
+                    "category": "Extraversion",
+                    "score": 17,
+                    "facets": {
+                        "Friendliness": 20,
+                        "Gregariousness": 21,
+                        "Assertiveness": 34,
+                        "Activity Level": 27,
+                        "Excitement-Seeking": 10,
+                        "Cheerfulness": 46
+                    }
+                },
+                {
+                    "category": "Agreeableness",
+                    "score": 86,
+                    "facets": {
+                        "Trust": 86,
+                        "Morality": 61,
+                        "Altruism": 69,
+                        "Cooperation": 87,
+                        "Modesty": 74,
+                        "Sympathy": 63
+                    }
+                },
+                {
+                    "category": "Conscientiousness",
+                    "score": 63,
+                    "facets": {
+                        "Self-Efficacy": 38,
+                        "Orderliness": 73,
+                        "Dutifulness": 78,
+                        "Achievement-Striving": 17,
+                        "Self-Discipline": 57,
+                        "Cautiousness": 80
+                    }
+                },
+                {
+                    "category": "Neuroticism",
+                    "score": 21,
+                    "facets": {
+                        "Anxiety": 12,
+                        "Anger": 4,
+                        "Depression": 72,
+                        "Self-Consciousness": 48,
+                        "Immoderation": 28,
+                        "Vulnerability": 19
+                    }
+                },
+                {
+                    "category": "Openness to Experience",
+                    "score": 59,
+                    "facets": {
+                        "Imagination": 19,
+                        "Artistic Interests": 60,
+                        "Emotionality": 43,
+                        "Adventurousness": 58,
+                        "Intellect": 27,
+                        "Liberalism": 99
+                    }
+                }
+            ]
+        },
+        {
+            "date": "2016-08",
+            "results": [
+                {
+                    "category": "Extraversion",
+                    "score": 33,
+                    "facets": {
+                        "Friendliness": 40,
+                        "Gregariousness": 44,
+                        "Assertiveness": 28,
+                        "Activity Level": 64,
+                        "Excitement-Seeking": 32,
+                        "Cheerfulness": 23
+                    }
+                },
+                {
+                    "category": "Agreeableness",
+                    "score": 98,
+                    "facets": {
+                        "Trust": 82,
+                        "Morality": 94,
+                        "Altruism": 82,
+                        "Cooperation": 84,
+                        "Modesty": 94,
+                        "Sympathy": 93
+                    }
+                },
+                {
+                    "category": "Conscientiousness",
+                    "score": 85,
+                    "facets": {
+                        "Self-Efficacy": 75,
+                        "Orderliness": 54,
+                        "Dutifulness": 89,
+                        "Achievement-Striving": 74,
+                        "Self-Discipline": 77,
+                        "Cautiousness": 90
+                    }
+                },
+                {
+                    "category": "Neuroticism",
+                    "score": 29,
+                    "facets": {
+                        "Anxiety": 30,
+                        "Anger": 3,
+                        "Depression": 75,
+                        "Self-Consciousness": 50,
+                        "Immoderation": 10,
+                        "Vulnerability": 42
+                    }
+                },
+                {
+                    "category": "Openness to Experience",
+                    "score": 85,
+                    "facets": {
+                        "Imagination": 44,
+                        "Artistic Interests": 58,
+                        "Emotionality": 82,
+                        "Adventurousness": 61,
+                        "Intellect": 61,
+                        "Liberalism": 99
+                    }
+                }
+            ]
+        }
+    ]
+}

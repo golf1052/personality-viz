@@ -1,0 +1,65 @@
+// =============================================
+
+// User Indepth styling
+
+// =============================================
+
+#categoryDiv {
+  margin: 30px;
+}
+
+.category-score {
+  display: inline-block;
+  width: 17%;
+  vertical-align: middle;
+  margin-right: 5%;
+  p {
+    margin: 0;
+    text-align: center;
+    &:first-of-type {
+      font-size: 40px;
+    }
+  }
+}
+
+.category-detail {
+  display: inline-block;
+  width: 77%;
+  vertical-align: middle;
+  font-size: 12px;
+}
+
+.index-group {
+  fill: #ffffff;
+}
+
+#radioDiv {
+  label:first-of-type {
+    padding-left: 0;
+  }
+  & + div {
+    font-size: 12px;
+    span {
+      margin-right: 10px;
+      cursor: pointer;
+    }
+  }
+}
+
+#facetsDiv {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.facet-div {
+  display: inline-block;
+  width: 46%;
+  margin-bottom: 30px;
+  margin-right: 3%;
+  .underline {
+    color: $dark-gray;
+    &:after {
+      background-color: $dark-gray;
+    }
+  }
+}

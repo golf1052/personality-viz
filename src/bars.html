@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Personality Vis</title>
+    <link rel="stylesheet" href="static/main.css"/>
+</head>
+<body>
+    <div class="container graph-container--bar">
+        <nav class="nav--arrow-back">
+          <a href="/" class="">Back</a>
+        </nav>
+        <div class="graph__header">
+            <div class="select-container">
+                <span class="select__option select__option--default">All Categories</span>
+                <ul class="select-options-container">
+                    <li class="select__option">Extraversion</li>
+                    <li class="select__option">Agreeableness</li>
+                    <li class="select__option">Conscientiousness</li>
+                    <li class="select__option">Neuroticism</li>
+                    <li class="select__option">Openness to Experience</li>
+                </ul>
+            </div>
+            <div id="facetsDiv" class="facet-select"></div>
+        </div>
+    </div>
+    <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+    <script src="static/helpers.js" charset="utf-8"></script>
+    <script src="static/constants.js" charset="utf-8"></script>
+    <script src="static/common-svg.js" charset="utf-8"></script>
+    <script src="static/bars/bars.js" charset="utf-8"></script>
+    <script src="static/domhandlers.js" charset="utf-8"></script>
+</body>
+</html>

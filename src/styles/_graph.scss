@@ -1,0 +1,111 @@
+// =============================================
+
+// Global Graph Styling
+
+// =============================================
+
+// =============================================
+// Graph Header
+// =============================================
+
+.graph__header {
+  margin: 0 50px;
+}
+
+.select-container {
+  margin-bottom: 10px;
+  select {
+    display: none;
+  }
+}
+
+.select-options-container {
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  background: white;
+  z-index: 2;
+  transition: height 0.2s linear;
+  .select__option {
+    border-bottom: none;
+    float: left;
+    clear: left;
+    &:first-of-type {
+      border-top: none;
+    }
+    &:last-of-type {
+      border-bottom: 1px solid black;
+    }
+    &:hover {
+      background: $hover-color;
+      color: white;
+      padding-left: 30px;
+    }
+  }
+
+  &--open {
+    height: 295px;
+  }
+}
+
+.select__option {
+  font-family: $titillium;
+  font-size: 25px;
+  padding: 10px 0 10px 20px;
+  width: 350px;
+  display: inline-block;
+  border: 1px solid $dark-gray;
+  color: $dark-gray;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.select__option--default {
+  position: relative;
+  &:after {
+    content: '▾';
+    position: absolute;
+    font-size: 30px;
+    right: 20px;
+    top: 5px;
+  }
+}
+
+.facet-select {
+  min-height: 20px;
+  span {
+    margin-right: 20px;
+    &:hover {
+      color: $hover-color;
+      &:after {
+        background-color: $hover-color;
+      }
+    }
+  }
+}
+
+
+// =============================================
+// Graph
+// =============================================
+
+.tick {
+  line {
+    stroke-width: 1px;
+  }
+  text {
+    font-size: 12px;
+  }
+}
+
+.axis {
+  stroke-width: 1.5px;
+}
+
+rect {
+  stroke: 0;
+}
+
+svg {
+  display: flex;
+}

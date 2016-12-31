@@ -1,0 +1,7 @@
+{
+    "files.exclude": {
+        "**/static/**": true
+    },
+    "files.autoSave": "off",
+    "eslint.enable": false
+}
