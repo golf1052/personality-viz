@@ -4,25 +4,32 @@ var autoprefixer = require('gulp-autoprefixer');
 var babel        = require('gulp-babel');
 var concat       = require('gulp-concat');
 var sass         = require('gulp-sass');
-var browserSync  = require('browser-sync');
+var connect      = require('gulp-connect');
+// var browserSync  = require('browser-sync');
 // var rename       = require('gulp-rename');
 // var uglify       = require('gulp-uglify');
 
-gulp.task('browser-sync', function() {
-  browserSync( {
-    server: {
-       baseDir: 'src',
-       routes: {
-         '/data': 'data'
-       }
-    }
-  } );
-} );
+// gulp.task('browser-sync', function() {
+//   browserSync( {
+//     server: {
+//        baseDir: 'src',
+//        routes: {
+//          '/data': 'data'
+//        }
+//     }
+//   } );
+// } );
 
-gulp.task('bs-reload', function () {
-  browserSync.reload();
-} );
+// gulp.task('bs-reload', function () {
+//   browserSync.reload();
+// } );
 
+gulp.task('connect', function() {
+  connect.server({
+    root: ['src', 'data', 'static'],
+    port: 3000
+  });
+});
 
 gulp.task('styles', function() {
   gulp.src( ['src/styles/**/*.scss'] )
@@ -34,7 +41,7 @@ gulp.task('styles', function() {
     .pipe( sass() )
     .pipe( autoprefixer('last 2 versions') )
     .pipe( gulp.dest('src/static') )
-    .pipe( browserSync.reload( { stream:true } ) )
+    // .pipe( browserSync.reload( { stream:true } ) )
 } );
 
 gulp.task('scripts', function() {
@@ -50,12 +57,9 @@ gulp.task('scripts', function() {
     // maybe we want this later, or delete it
     // .pipe( rename( {suffix: '.min'} ) )
     // .pipe( uglify() )
-    .pipe( browserSync.reload( { stream:true } ) )
+    // .pipe( browserSync.reload( { stream:true } ) )
 } );
 
 gulp.task('build', ['styles', 'scripts'] );
-gulp.task('default', ['browser-sync', 'build'], function() {
-  gulp.watch('src/styles/**/*.scss', ['styles'] );
-  gulp.watch('src/scripts/**/*.js', ['scripts'] );
-  gulp.watch('src/*.html', ['bs-reload'] );
+gulp.task('default', ['build', 'connect'], function() {
 } );
