@@ -41,7 +41,7 @@ let allDataPromise = Promise.all([
   loadDataIntoName('participant_1'),
   loadDataIntoName('participant_2'),
   loadDataIntoName('participant_3'),
-  loadDataIntoName('participant_4')
+  loadDataIntoName('participant_4'),
   loadReportText()
 ]);
 

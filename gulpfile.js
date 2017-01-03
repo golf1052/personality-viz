@@ -9,20 +9,20 @@ var connect      = require('gulp-connect');
 // var rename       = require('gulp-rename');
 // var uglify       = require('gulp-uglify');
 
-// gulp.task('browser-sync', function() {
-//   browserSync( {
-//     server: {
-//        baseDir: 'src',
-//        routes: {
-//          '/data': 'data'
-//        }
-//     }
-//   } );
-// } );
+gulp.task('browser-sync', function() {
+  browserSync( {
+    server: {
+       baseDir: 'src',
+       routes: {
+         '/data': 'data'
+       }
+    }
+  } );
+} );
 
-// gulp.task('bs-reload', function () {
-//   browserSync.reload();
-// } );
+gulp.task('bs-reload', function () {
+  browserSync.reload();
+} );
 
 gulp.task('connect', function() {
   connect.server({
@@ -61,5 +61,18 @@ gulp.task('scripts', function() {
 } );
 
 gulp.task('build', ['styles', 'scripts'] );
+
+// server default task
 gulp.task('default', ['build'], function() {
 } );
+
+// gulp-connect server
+// gulp.task('default', ['build', 'connect'], function() {
+// } );
+
+// browser-sync
+// gulp.task('default', ['browser-sync', 'build'], function() {
+//   gulp.watch('src/styles/**/*.scss', ['styles'] );
+//   gulp.watch('src/scripts/**/*.js', ['scripts'] );
+//   gulp.watch('src/*.html', ['bs-reload'] );
+// } );

@@ -1,7 +1,7 @@
 // names and names list :kappa:
 'use strict';
 
-var namesList = ['participant_1', 'participant_2', 'participant_3'];
+var namesList = ['participant_1', 'participant_2', 'participant_3', 'participant_4'];
 
 var categories = ['Extraversion', 'Agreeableness', 'Conscientiousness', 'Neuroticism', 'Openness to Experience'];
 
@@ -20,13 +20,14 @@ var colors = {
 var names = {
   participant_1: { color_name: 'red', data: null, image: 'images/test-image.png' },
   participant_2: { color_name: 'green', data: null, image: 'images/test-image.png' },
-  participant_3: { color_name: 'blue', data: null, image: 'images/test-image.png' }
+  participant_3: { color_name: 'blue', data: null, image: 'images/test-image.png' },
+  participant_4: { color_name: 'brown', data: null, image: 'images/test-image.png' }
 };
 
 var materialColors = {};
 var reportText = {};
 
-var allDataPromise = Promise.all([loadMaterialColors(), loadDataIntoName('participant_1'), loadDataIntoName('participant_2'), loadDataIntoName('participant_3'), loadReportText()]);
+var allDataPromise = Promise.all([loadMaterialColors(), loadDataIntoName('participant_1'), loadDataIntoName('participant_2'), loadDataIntoName('participant_3'), loadDataIntoName('participant_4'), loadReportText()]);
 
 var transparent = 'rgba(255, 255, 255, 0.0)';
 var body = d3.select('body');

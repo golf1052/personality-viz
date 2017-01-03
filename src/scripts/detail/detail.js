@@ -33,7 +33,7 @@ function displayScores() {
       let userCategory = userResults.results.find(function(result) {
         return result.category == selectedCategory;
       });
-      categoryDiv.select('#score').select('p').text(userCategory.score);
+      categoryDiv.select('#score').select('p').call(transitionNumber, userCategory.score);
       categoryDiv.select('#score').select('#title').text(getScoreTitle(userCategory.score));
 
       let facetData = Object.keys(userCategory.facets).map(function(key) {
@@ -43,37 +43,68 @@ function displayScores() {
           text: cat.facets[key]
         }
       });
-      d3.selectAll('.facetDiv').remove();
       let facetDivs = d3.select('#facetsDiv').selectAll('.facet-div').data(facetData, function(d) {
-        return d.key;
+        return d.key + d.score;
       });
       facetDivs.exit().remove();
       let mainFacetDiv = facetDivs.enter().append('div')
         .attr('class', 'facet-div');
       mainFacetDiv.append('p')
-        .attr('class', 'underline')
-        .text(function(d) {
-          return d.key;
-        });
+        .attr('class', 'underline');
       let innerFacetDiv = mainFacetDiv.append('div');
       let facetScoreDiv = innerFacetDiv.append('div')
         .attr('class', 'category-score');
       facetScoreDiv.append('p')
-        .text(function(d) {
-          return d.score;
-        });
+        .attr('class', 'score');
       facetScoreDiv.append('p')
+        .attr('class', 'score-title');
+      innerFacetDiv.append('div')
+        .attr('class', 'category-detail')
+        .append('p');
+      facetDivs.merge(facetDivs);
+      mainFacetDiv.select('.underline')
+        .text(function(d) {
+          return d.key;
+        });
+      mainFacetDiv.select('.score')
+        .transition()
+        .on('start', function() {
+          d3.active(this)
+            .tween('text', function(d) {
+              let format = d3.format(',d');
+              var that = d3.select(this);
+              var i = d3.interpolateNumber(that.text().replace(/,/g, ''), d.score);
+              return function(t) {
+                that.text(format(i(t)));
+              }
+            });
+        });
+      mainFacetDiv.select('.score-title')
         .text(function(d) {
           return getScoreTitle(d.score);
         });
-      innerFacetDiv.append('div')
-        .attr('class', 'category-detail')
-        .append('p')
+      mainFacetDiv.select('.category-detail')
+        .select('p')
         .text(function(d) {
           return d.text;
         });
     }
   });
+}
+
+function transitionNumber(text, score) {
+  let format = d3.format(',d');
+  text.transition()
+    .on('start', function () {
+      d3.active(this)
+        .tween('text', function() {
+          var that = d3.select(this);
+          var i = d3.interpolateNumber(that.text().replace(/,/g, ''), score);
+          return function(t) {
+            that.text(format(i(t)));
+          }
+        });
+    });
 }
 
 function pullOutDates(userName) {

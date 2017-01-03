@@ -34,7 +34,7 @@ function displayScores() {
         var userCategory = userResults.results.find(function (result) {
           return result.category == selectedCategory;
         });
-        categoryDiv.select('#score').select('p').text(userCategory.score);
+        categoryDiv.select('#score').select('p').call(transitionNumber, userCategory.score);
         categoryDiv.select('#score').select('#title').text(getScoreTitle(userCategory.score));
 
         var facetData = Object.keys(userCategory.facets).map(function (key) {
@@ -44,28 +44,52 @@ function displayScores() {
             text: cat.facets[key]
           };
         });
-        d3.selectAll('.facetDiv').remove();
         var facetDivs = d3.select('#facetsDiv').selectAll('.facet-div').data(facetData, function (d) {
-          return d.key;
+          return d.key + d.score;
         });
         facetDivs.exit().remove();
         var mainFacetDiv = facetDivs.enter().append('div').attr('class', 'facet-div');
-        mainFacetDiv.append('p').attr('class', 'underline').text(function (d) {
-          return d.key;
-        });
+        mainFacetDiv.append('p').attr('class', 'underline');
         var innerFacetDiv = mainFacetDiv.append('div');
         var facetScoreDiv = innerFacetDiv.append('div').attr('class', 'category-score');
-        facetScoreDiv.append('p').text(function (d) {
-          return d.score;
+        facetScoreDiv.append('p').attr('class', 'score');
+        facetScoreDiv.append('p').attr('class', 'score-title');
+        innerFacetDiv.append('div').attr('class', 'category-detail').append('p');
+        facetDivs.merge(facetDivs);
+        mainFacetDiv.select('.underline').text(function (d) {
+          return d.key;
         });
-        facetScoreDiv.append('p').text(function (d) {
+        mainFacetDiv.select('.score').transition().on('start', function () {
+          d3.active(this).tween('text', function (d) {
+            var format = d3.format(',d');
+            var that = d3.select(this);
+            var i = d3.interpolateNumber(that.text().replace(/,/g, ''), d.score);
+            return function (t) {
+              that.text(format(i(t)));
+            };
+          });
+        });
+        mainFacetDiv.select('.score-title').text(function (d) {
           return getScoreTitle(d.score);
         });
-        innerFacetDiv.append('div').attr('class', 'category-detail').append('p').text(function (d) {
+        mainFacetDiv.select('.category-detail').select('p').text(function (d) {
           return d.text;
         });
       })();
     }
+  });
+}
+
+function transitionNumber(text, score) {
+  var format = d3.format(',d');
+  text.transition().on('start', function () {
+    d3.active(this).tween('text', function () {
+      var that = d3.select(this);
+      var i = d3.interpolateNumber(that.text().replace(/,/g, ''), score);
+      return function (t) {
+        that.text(format(i(t)));
+      };
+    });
   });
 }
 
