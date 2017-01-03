@@ -2,7 +2,8 @@
 var namesList = [
   'participant_1',
   'participant_2',
-  'participant_3'
+  'participant_3',
+  'participant_4'
 ];
 
 let categories = [
@@ -28,7 +29,8 @@ var colors = {
 var names = {
   participant_1 : {color_name: 'red', data: null, image: 'images/test-image.png'},
   participant_2 : {color_name: 'green', data: null, image: 'images/test-image.png'},
-  participant_3 : {color_name: 'blue', data: null, image: 'images/test-image.png'}
+  participant_3 : {color_name: 'blue', data: null, image: 'images/test-image.png'},
+  participant_4 : {color_name: 'brown', data: null, image: 'images/test-image.png'}
 };
 
 let materialColors = {};
@@ -39,6 +41,7 @@ let allDataPromise = Promise.all([
   loadDataIntoName('participant_1'),
   loadDataIntoName('participant_2'),
   loadDataIntoName('participant_3'),
+  loadDataIntoName('participant_4')
   loadReportText()
 ]);
 
