@@ -36,14 +36,15 @@ var names = {
 let materialColors = {};
 let reportText = {};
 
-let allDataPromise = Promise.all([
-  loadMaterialColors(),
-  loadDataIntoName('participant_1'),
-  loadDataIntoName('participant_2'),
-  loadDataIntoName('participant_3'),
-  loadDataIntoName('participant_4'),
-  loadReportText()
-]);
+let allDataPromise = loadMaterialColors().then(function() {
+  return Promise.all([
+    loadDataIntoName('participant_1'),
+    loadDataIntoName('participant_2'),
+    loadDataIntoName('participant_3'),
+    loadDataIntoName('participant_4'),
+    loadReportText()
+  ]);
+});
 
 let transparent = 'rgba(255, 255, 255, 0.0)';
 let body = d3.select('body');
