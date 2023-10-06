@@ -1,5 +1,5 @@
 function loadData(fileName) {
-  let url = 'http://personality-viz.golf1052.com/data/' + fileName + '.json';
+  let url = 'https://personality-viz.golf1052.com/data/' + fileName + '.json';
   return new Promise(function(resolve, reject) {
     d3.json(url, function(error, data) {
       if (error) {
